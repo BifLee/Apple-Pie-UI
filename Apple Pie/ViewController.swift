@@ -10,7 +10,33 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var treeImageView: UIImageView!;
+    @IBOutlet weak var correctWordLabel: UILabel!;
+    @IBOutlet weak var scoreLabel: UILabel!;
+    
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        sender.isEnabled = false;
+    }
+    
+    var listOfWords = [
+        "Эдуардо",
+        "Леха",
+        "Даха",
+        "Аня",
+        "Даня"
+    ]
+    
+    let incorrectMovesAllowed = 7;
+    
+    var totalWins = 0;
+    var totalLosses = 0;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        newRound();
+    }
+    
+    func newRound() {
+        
     }
 }
